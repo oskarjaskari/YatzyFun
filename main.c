@@ -21,6 +21,28 @@ int main(){
     }
     printf("We have %d number of players", numer_of_players);
 
+    
+    char players[6][20] = {0}; 
+    for (int player = 1; player <= numer_of_players; player++)
+    {
+        printf("Enter player %d name\n", player);
+        scanf("%19s", players[player]);
+        printf("Add player %19s \n", players[player]);
+
+    }
+    int score_board[6][15] ;
+    // initsialiserar scorboard med -1 för att berätta att den inte är använd ännu
+    // if -1, score är inte använd ännu
+    for (int player = 0 ; player < 6; player++)
+    {
+        for (int score = 0; score < 15; score++)
+        {
+            score_board[player][score] = -1; 
+        }
+    }
+    
+
+
 
     return 0;
 }
